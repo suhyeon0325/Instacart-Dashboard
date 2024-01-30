@@ -129,6 +129,9 @@ def main():
         reorder_100 = reorder_ratio[reorder_ratio == 100]
         st.dataframe(reorder_100)
 
+    with st.sidebar:
+        st.info(" 설연휴 배송 기간 연장 안내", icon="ℹ️")
+
 
 if __name__ == "__main__":
     main()
