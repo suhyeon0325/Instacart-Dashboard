@@ -111,7 +111,7 @@ def main():
                 x='시간대',
                 y='주문수',
                 title='시간대별 주문수',
-                labels={'order_hour_of_day': 'Hour of Day', 'order_id': 'Number of Orders'}
+                labels={'시간대': 'Hour of Day', '주문수': 'Number of Orders'}
             )
             fig3.update_layout(layout)
             st.plotly_chart(fig3, use_container_width=True)
