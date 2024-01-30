@@ -151,7 +151,6 @@ def main():
     
 
     # Sidebar - 인기제품 top10
-    with st.container(border=True):
     side_tab1, side_tab2 = st.sidebar.tabs(["Best", "Reorder"])
     with side_tab1:
         st.write("Best 10")
