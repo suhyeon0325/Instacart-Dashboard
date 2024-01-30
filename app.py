@@ -37,7 +37,7 @@ def main():
     hourly_orders = data.groupby('order_hour_of_day')['order_id'].count().reset_index()
     fig3 = go.Figure(go.Scatter(x=hourly_orders['order_hour_of_day'], y=hourly_orders['order_id'], mode='lines+markers'))
     fig3.update_layout(
-        title_text='Number of Orders by Hour of Day',
+        title_text='시간대별 주문수',
         title_x=0.5,
         xaxis_title='Hour of Day',
         yaxis_title='Number of Orders',
