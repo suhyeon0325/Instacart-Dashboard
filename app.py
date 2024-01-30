@@ -108,8 +108,8 @@ def main():
             hourly_orders = data.groupby('order_hour_of_day')['order_id'].count().reset_index()
             fig3 = px.line(
                 hourly_orders,
-                x='order_hour_of_day',
-                y='order_id',
+                x='시간대',
+                y='주문수',
                 title='시간대별 주문수',
                 labels={'order_hour_of_day': 'Hour of Day', 'order_id': 'Number of Orders'}
             )
@@ -172,4 +172,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
