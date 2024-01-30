@@ -108,10 +108,10 @@ def main():
             hourly_orders = data.groupby('order_hour_of_day')['order_id'].count().reset_index()
             fig3 = px.line(
                 hourly_orders,
-                x='시간대',
-                y='주문수',
+                x='order_hour_of_day',
+                y='order_id',
                 title='시간대별 주문수',
-                labels={'시간대': 'Hour of Day', '주문수': 'Number of Orders'}
+                labels={'order_hour_of_day': '시간대', 'order_id': '주문수'}
             )
             fig3.update_layout(layout)
             st.plotly_chart(fig3, use_container_width=True)
